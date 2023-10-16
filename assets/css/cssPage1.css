@@ -18,12 +18,19 @@ h1 {
     text-align: left;
     padding-left: 100px;
     padding-top: 50px;
-    font-size: 70px;
-    width: 500px;
+    font-size: 91px;
+    width: 550px;
     font-weight: 300;
+    margin-bottom: -40px;
 }
 
-span {
+.title2 {
+  color: white;
+    text-align: left;
+    padding-left: 100px;
+    padding-top: 50px;
+    font-size: 91px;
+    width: 550px;
   font-weight: 700;
 }
 
