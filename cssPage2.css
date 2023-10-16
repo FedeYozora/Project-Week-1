@@ -27,6 +27,15 @@ body {
   width: 100%;
   display: inline-block;
   margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+.result {
+  display: inline-block;
+}
+.results {
+  text-align: right;
+  font-size: 20px;
 }
 
 #button {
@@ -35,7 +44,7 @@ body {
 
 .main {
   margin: 100px;
-  margin-top: 5rem;
+
   margin-inline: auto;
   width: 440px;
 }
@@ -58,6 +67,6 @@ body {
 }
 
 #footer {
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-align: center;
 }
