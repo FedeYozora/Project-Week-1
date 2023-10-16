@@ -1,0 +1,63 @@
+body {
+  background-image: url(./assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+.firstImage img {
+  width: 200px;
+  float: left;
+}
+
+.firstImage {
+  margin-top: 2rem;
+  margin-left: 100px;
+}
+
+.firstParagraphs {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  object-position: center;
+}
+
+#firstBox {
+  margin: 0;
+  width: 100%;
+  display: inline-block;
+  margin-inline: auto;
+}
+
+#button {
+  font-size: 100px;
+}
+
+.main {
+  margin: 100px;
+  margin-top: 5rem;
+  margin-inline: auto;
+  width: 440px;
+}
+.contenitore2 {
+  margin: 2rem;
+  padding: 50px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.buttons {
+  padding: 40px 190px;
+  background-color: transparent;
+  color: white;
+  border-radius: 120px;
+  box-shadow: -1px -1px 1px, 1px -4px 10px;
+  border: 0 5px solid;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#footer {
+  margin-top: 5rem;
+  text-align: center;
+}
