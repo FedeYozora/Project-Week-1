@@ -123,31 +123,47 @@ window.onload = () => {
     showQuestion();
   }
 
+  let handleCorrectAns = function (event) {
+    score++;
+    this.removeEventListener("click", handleCorrectAns);
+    console.log(score);
+  };
+
   function showQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
     let questionNum = currentQuestionIndex + 1;
+
     questionSpace.innerText = currentQuestion.question;
-    let questionLenght = questions.length;
-    questionCounter.innerHTML = "DOMANDA " + questionNum + "/" + questionLenght;
 
-    for (let i = 0; i < questions.length; i++) {
-      const question = questions[i];
-      const button = document.createElement("button");
-      button.innerText = question.correct_answer;
-      button.classList.add("correctAnswer");
-      answerButton.appendChild(button);
-      break;
+    questionCounter.innerHTML =
+      "DOMANDA " + questionNum + "/" + questions.length;
+
+    const correctButton = document.createElement("button");
+    correctButton.innerText = currentQuestion.correct_answer;
+    correctButton.classList.add("correctAnswer");
+    correctButton.addEventListener("click", handleCorrectAns);
+
+    correctButton.addEventListener("click", (e) => {
+      nextButton.classList.remove("invisible");
+    });
+    answerButton.appendChild(correctButton);
+
+    for (let i = 0; i < currentQuestion.incorrect_answers.length; i++) {
+      const incorrectButton = document.createElement("button");
+      incorrectButton.innerText = currentQuestion.incorrect_answers[i];
+      incorrectButton.classList.add("incorrectAnswer");
+      answerButton.appendChild(incorrectButton);
+
+      incorrectButton.addEventListener("click", (e) => {
+        nextButton.classList.remove("invisible");
+      });
     }
 
-    for (let i = 0; i < questions.length; i++) {
-      const question = questions[i];
-      const button = document.createElement("button");
-      const wrongAnswer = question.incorrect_answers.split();
-      button.innerText = wrongAnswer;
-      button.classList.add("incorrectAnswer");
-      answerButton.appendChild(button);
-      break;
-    }
+    currentQuestionIndex++;
   }
+
+  nextButton.addEventListener("click", showQuestion);
+
   startQuiz();
+  startTimer();
 };
