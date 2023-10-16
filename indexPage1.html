@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -19,7 +19,7 @@
         <img src="./assets/epicode_logo.png" alt="Logo Epicode" />
       </header>
 
-      <h1>Welcome to your exam</h1>
+      <h1>Welcome to <span>your exam</span></h1>
 
       <h3>Instructions</h3>
       <p>
@@ -28,7 +28,8 @@
       </p>
       <ul>
         <li>
-          Each question is <span>timed</span> and can only be answered once.
+          Each question is <span>timed</span> and can only be
+          <span>answered once.</span>
         </li>
         <li>
           Changing browser tab or opening other windows will
@@ -37,14 +38,15 @@
         <li>This exam will take approx. <span>0-5 minutes.</span></li>
       </ul>
 
-      <form>
+      <div class="form">
         <div class="checkmark">
           <input type="checkbox" id="myCheckbox" required />
+          <div class="checkmark-box"></div>
         </div>
         <label for="myCheckbox"
           >I promise to answer myself without help from anyone</label
         >
-      </form>
+      </div>
       <div class="button" style="display: inline-block">
         <button id="myButton" onclick="redirectToPage()">PROCEED</button>
       </div>
