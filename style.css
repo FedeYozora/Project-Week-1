@@ -1,0 +1,38 @@
+body {
+  background-image: url(./assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+.firstImage img {
+  width: 200px;
+  float: left;
+}
+
+.firstImage {
+  margin-top: 2rem;
+  padding: 40px;
+  margin-inline: auto;
+}
+
+.firstParagraphs {
+  color: white;
+  text-align: center;
+  margin-top: 110px;
+  font-size: 1.5rem;
+}
+
+#secondBox {
+  position: absolute;
+  right: 0;
+}
+
+#firstBox {
+  display: inline-block;
+  width: 100%;
+}
+
+.contenitore {
+  position: relative;
+}
