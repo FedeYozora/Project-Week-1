@@ -105,6 +105,8 @@ let score = 0;
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
+  scoreCorrect = 0;
+  scoreIncorrect = 0;
   nextButton.innerHTML = "Prossima";
   showQuestion();
 }
@@ -114,7 +116,8 @@ function showQuestion() {
   let questionNum = currentQuestionIndex + 1;
   questionSpace.innerHTML = currentQuestion.question;
   let questionLenght = "/" + questions.length;
-  questionCounter.innerHTML = "DOMANDA " + questionNum;
+  questionLenght.classList.add("redColor");
+  questionCounter.innerHTML = "DOMANDA " + questionNum + questionLenght;
 
   currentQuestion.correct_answer.forEach((answer) => {
     const button = document.createElement("button");
@@ -130,3 +133,5 @@ function showQuestion() {
     answerButton.appendChild(button);
   });
 }
+
+function ifCorrect() {}
