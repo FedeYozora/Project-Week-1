@@ -1,0 +1,47 @@
+body {
+    background-image: url(../bg.jpg);
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+header img {
+    width: 180px;
+    position: relative;
+    left: 100px;
+    top: 40px;
+}
+
+div h1 {
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 55px; 
+    width: 500px;
+    margin-inline: auto;
+    margin-bottom: 10px;
+}
+
+div h3 {
+    color: white;
+    text-align: center;
+    margin-inline: auto;
+    font-size: 25px; 
+    margin-top: 0;
+    font-weight: 300;
+}
+
+footer {
+    margin-inline: auto;
+    text-align: center;
+}
+
+footer h2 {
+    color: white;
+    border-color: white;
+    border: 2px solid;
+    width: 215px;
+    padding-block: 15px;
+    margin-inline: auto;
+    font-size: 1.5em;
+    padding-block: 15px;
+}
