@@ -95,7 +95,6 @@ const questions = [
 ];
 
 window.onload = () => {
-  const proceedToQuiz = document.getElementById("myButton");
   const questionSpace = document.getElementById("questionArea");
   const answerButton = document.getElementById("buttonRow");
   const nextButton = document.getElementById("nextQuestion");
@@ -130,8 +129,10 @@ window.onload = () => {
   };
 
   function showQuestion() {
+    // nextButton.addEventListener("click", answerButton.removeChild());  // DEVE SUCCEDERE QUESTO PER FAR RESETTARE LE DOMANDE SENNò SI CONTINUANO AD IMPILARE, CREDO NON FUNZIONI PERCHè è TUTTO DENTRO WINDOW.ONLOAD
     let currentQuestion = questions[currentQuestionIndex];
     let questionNum = currentQuestionIndex + 1;
+    nextButton.classList.add("invisible");
 
     questionSpace.innerText = currentQuestion.question;
 
