@@ -94,44 +94,60 @@ const questions = [
   },
 ];
 
-const questionSpace = document.getElementById("");
-const answerButton = document.getElementById("");
-const nextButton = document.getElementById("");
-const questionCounter = document.getElementById("");
+window.onload = () => {
+  const proceedToQuiz = document.getElementById("myButton");
+  const questionSpace = document.getElementById("questionArea");
+  const answerButton = document.getElementById("buttonRow");
+  const nextButton = document.getElementById("nextQuestion");
+  const questionCounter = document.getElementById("questionCount");
 
-let currentQuestionIndex = 0;
-let score = 0;
+  let currentQuestionIndex = 0;
+  let score = 0;
 
-function startQuiz() {
-  currentQuestionIndex = 0;
-  score = 0;
-  scoreCorrect = 0;
-  scoreIncorrect = 0;
-  nextButton.innerHTML = "Prossima";
-  showQuestion();
-}
+  function startTimer() {
+    const time = 20;
+    const interval = setInterval(function () {
+      time--;
+      if (time <= 0) {
+        clearInterval(interval);
+        time = 20;
+        loadNextQuestion();
+      }
+    }, 1000);
+  }
 
-function showQuestion() {
-  let currentQuestion = questions[currentQuestionIndex];
-  let questionNum = currentQuestionIndex + 1;
-  questionSpace.innerHTML = currentQuestion.question;
-  let questionLenght = "/" + questions.length;
-  questionLenght.classList.add("redColor");
-  questionCounter.innerHTML = "DOMANDA " + questionNum + questionLenght;
+  function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerText = "Prossima";
+    showQuestion();
+  }
 
-  currentQuestion.correct_answer.forEach((answer) => {
-    const button = document.createElement("button");
-    button.innerHTML = answer.correct_answer;
-    button.classList.add("correctAnswer");
-    answerButton.appendChild(button);
-  });
+  function showQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNum = currentQuestionIndex + 1;
+    questionSpace.innerText = currentQuestion.question;
+    let questionLenght = questions.length;
+    questionCounter.innerHTML = "DOMANDA " + questionNum + "/" + questionLenght;
 
-  currentQuestion.incorrect_answers.forEach((answer) => {
-    const button = document.createElement("button");
-    button.innerHTML = answer.incorrect_answers;
-    button.classList.add("incorrectAnswer");
-    answerButton.appendChild(button);
-  });
-}
+    for (let i = 0; i < questions.length; i++) {
+      const question = questions[i];
+      const button = document.createElement("button");
+      button.innerText = question.correct_answer;
+      button.classList.add("correctAnswer");
+      answerButton.appendChild(button);
+      break;
+    }
 
-function ifCorrect() {}
+    for (let i = 0; i < questions.length; i++) {
+      const question = questions[i];
+      const button = document.createElement("button");
+      const wrongAnswer = question.incorrect_answers.split();
+      button.innerText = wrongAnswer;
+      button.classList.add("incorrectAnswer");
+      answerButton.appendChild(button);
+      break;
+    }
+  }
+  startQuiz();
+};

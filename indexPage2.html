@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./cssPage2.css" />
+    <script src="./scriptQuiz.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -30,23 +31,16 @@
     <main class="contenitore2">
       <div class="firstParagraphs">
         <h1>
-          <span style="font-weight: lighter">How can I create a</span>
-          <br />checkbox in HTML?
+          <span style="font-weight: lighter" id="questionArea"></span>
         </h1>
       </div>
-      <!-- <div id="button">
-        <button class="buttons"></button>
-        <button class="buttons"></button>
-      </div>
-      <div id="button">
-        <button class="buttons"></button>
-        <button class="buttons"></button>
-      </div> -->
+      <div id="buttonRow"></div>
+      <button id="nextQuestion"></button>
     </main>
     <footer>
-      <!-- <div id="footer">
-        <h3 class="everyH3">QUESTION 1 / 10</h3>
-      </div> -->
+      <div id="footer">
+        <h3 id="questionCount"></h3>
+      </div>
     </footer>
   </body>
 </html>

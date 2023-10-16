@@ -52,7 +52,7 @@ body {
   text-align: center;
 }
 
-.buttons {
+button {
   padding: 40px 190px;
   background-color: transparent;
   color: white;

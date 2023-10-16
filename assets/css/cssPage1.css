@@ -1,125 +1,125 @@
-
 body {
-    background-image: url(../bg.jpg);
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300
+  background-image: url(../bg.jpg);
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
-
+a {
+  text-decoration: none;
+}
 header img {
-    width: 180px;
-    position: relative;
-    left: 100px;
-    top: 40px;
+  width: 180px;
+  position: relative;
+  left: 100px;
+  top: 40px;
 }
 
 h1 {
-    color: white;
-    text-align: left;
-    padding-left: 100px;
-    padding-top: 50px;
-    font-size: 91px;
-    width: 550px;
-    font-weight: 300;
-    margin-bottom: -40px;
+  color: white;
+  text-align: left;
+  padding-left: 100px;
+  padding-top: 50px;
+  font-size: 91px;
+  width: 550px;
+  font-weight: 300;
+  margin-bottom: -40px;
 }
 
 .title2 {
   color: white;
-    text-align: left;
-    padding-left: 100px;
-    padding-top: 50px;
-    font-size: 91px;
-    width: 550px;
+  text-align: left;
+  padding-left: 100px;
+  padding-top: 50px;
+  font-size: 91px;
+  width: 550px;
   font-weight: 700;
 }
 
 div h3 {
- color: rgb(194, 18, 141);
-padding-left: 100px;
-font-size: 35px;
-margin-bottom: 10px;
+  color: rgb(194, 18, 141);
+  padding-left: 100px;
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 
 div p {
-    color: white;
-    padding-left: 100px;
-    padding-bottom: 20px;
-    width: 615px;
-    font-size: 1.3em
+  color: white;
+  padding-left: 100px;
+  padding-bottom: 20px;
+  width: 615px;
+  font-size: 1.3em;
 }
 
 div ul {
-    color: white;
-    padding-left: 135px;
-    font-size: 1.3em
+  color: white;
+  padding-left: 135px;
+  font-size: 1.3em;
 }
 
 div li {
-    padding-block: 5px;
+  padding-block: 5px;
 }
 
 .form {
   font-weight: bold;
-      padding-left: 100px;
-      color: white;
-      padding-top: 70px;
-      display: inline-block;
-      margin-right: 320px;
-      margin-left: 50px;
-  
-  }
-  
-  input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;}
-  
-  .checkmark {
-      position: relative;
-      top: 25px;
-      left: -45px;
-      height: 25px;
-      width: 25px;
-      background-color:  rgb(11,17,59);
-      border-color: white;
-      border: 2px solid;
-    }
-  
-  
-  #myCheckbox {
-      height: 25px;
-      width: 25px;
-      background-color: rgb(11,17,59);
-      border: 5px;
-      border-color: white;
-      position: relative;
-      margin: 0;
-  }
-  
-    #myButton {
-      background-color: rgb(0, 255, 255);
-      border: none;
-        color: rgb(11, 17, 59);
-        padding: 13px 50px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 30px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        display: block;
-        margin-left: auto;
-        margin-right: 0;
-        text-align: right;
-        display: inline-block;
-        box-shadow: 0px 0px 15px 5px #00FFFF ;
-        cursor:pointer;
-      }
-    
-      #myButton:hover {
-        background-color: rgb(11, 17, 59);
-        color: rgb(0, 255, 255);
-      }
+  padding-left: 100px;
+  color: white;
+  padding-top: 70px;
+  display: inline-block;
+  margin-right: 320px;
+  margin-left: 50px;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  top: 25px;
+  left: -45px;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(11, 17, 59);
+  border-color: white;
+  border: 2px solid;
+}
+
+#myCheckbox {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(11, 17, 59);
+  border: 5px;
+  border-color: white;
+  position: relative;
+  margin: 0;
+}
+
+#myButton {
+  background-color: rgb(0, 255, 255);
+  border: none;
+  color: rgb(11, 17, 59);
+  padding: 13px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+  display: inline-block;
+  box-shadow: 0px 0px 15px 5px #00ffff;
+  cursor: pointer;
+}
+
+#myButton:hover {
+  background-color: rgb(11, 17, 59);
+  color: rgb(0, 255, 255);
+}
