@@ -16,7 +16,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -104,16 +104,29 @@ window.onload = () => {
   let score = 0;
 
   function startTimer() {
-    const time = 20;
-    const interval = setInterval(function () {
+    let time = 20;
+    let interval = setInterval(function () {
       time--;
       if (time <= 0) {
         clearInterval(interval);
         time = 20;
         loadNextQuestion();
+      } else {
+        console.log(time); // Log the remaining time to the console
       }
     }, 1000);
   }
+
+  var countdownNumberEl = document.getElementById("countdown-number");
+  var countdown = 20;
+
+  countdownNumberEl.textContent = countdown;
+
+  setInterval(function () {
+    countdown = --countdown <= 0 ? 20 : countdown;
+
+    countdownNumberEl.textContent = countdown;
+  }, 1000);
 
   function startQuiz() {
     currentQuestionIndex = 0;
@@ -122,29 +135,36 @@ window.onload = () => {
     showQuestion();
   }
 
-  let handleCorrectAns = function (event) {
-    score++;
-    this.removeEventListener("click", handleCorrectAns);
-    console.log(score);
-  };
+  function loadNextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      showQuestion();
+      startTimer();
+    } else {
+      displayResults();
+    }
+  }
 
   function showQuestion() {
-    // nextButton.addEventListener("click", answerButton.removeChild());  // DEVE SUCCEDERE QUESTO PER FAR RESETTARE LE DOMANDE SENNò SI CONTINUANO AD IMPILARE, CREDO NON FUNZIONI PERCHè è TUTTO DENTRO WINDOW.ONLOAD
+    nextButton.addEventListener("click", loadNextQuestion);
+    nextButton.classList.add("invisible");
+
     let currentQuestion = questions[currentQuestionIndex];
     let questionNum = currentQuestionIndex + 1;
-    nextButton.classList.add("invisible");
 
     questionSpace.innerText = currentQuestion.question;
 
     questionCounter.innerHTML =
       "DOMANDA " + questionNum + "/" + questions.length;
 
+    answerButton.innerHTML = ""; // Clear the answer button
+
     const correctButton = document.createElement("button");
     correctButton.innerText = currentQuestion.correct_answer;
     correctButton.classList.add("correctAnswer");
     correctButton.addEventListener("click", handleCorrectAns);
 
-    correctButton.addEventListener("click", (e) => {
+    correctButton.addEventListener("click", e => {
       nextButton.classList.remove("invisible");
     });
     answerButton.appendChild(correctButton);
@@ -152,16 +172,20 @@ window.onload = () => {
     for (let i = 0; i < currentQuestion.incorrect_answers.length; i++) {
       const incorrectButton = document.createElement("button");
       incorrectButton.innerText = currentQuestion.incorrect_answers[i];
-      incorrectButton.classList.add("incorrectAnswer");
+      incorrectButton.addEventListener("click", handleIncorrectAns);
       answerButton.appendChild(incorrectButton);
-
-      incorrectButton.addEventListener("click", (e) => {
-        nextButton.classList.remove("invisible");
-      });
     }
-
-    currentQuestionIndex++;
   }
+
+  let handleCorrectAns = function (event) {
+    score++;
+    this.removeEventListener("click", handleCorrectAns);
+    console.log(score);
+  };
+
+  let handleIncorrectAns = function (event) {
+    this.removeEventListener("click", handleIncorrectAns);
+  };
 
   nextButton.addEventListener("click", showQuestion);
 
