@@ -50,6 +50,7 @@ body {
   padding: 50px;
   margin-inline: auto;
   text-align: center;
+  width: 65%;
 }
 
 button {
@@ -61,12 +62,14 @@ button {
   border: 0 5px solid;
   font-size: 16px;
   cursor: pointer;
+  margin: 10px;
 }
 .invisible {
   visibility: hidden;
 }
 
 #footer {
+  color: white;
   margin-top: 3rem;
   text-align: center;
 }
@@ -100,7 +103,7 @@ svg circle {
   stroke-dashoffset: 0px;
   stroke-linecap: round;
   stroke-width: 2px;
-  stroke: white;
+  stroke: rgb(0, 255, 255);
   fill: none;
   animation: countdown 20s linear infinite forwards;
 }

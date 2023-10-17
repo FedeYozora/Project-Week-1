@@ -117,6 +117,12 @@ window.onload = () => {
     }, 1000);
   }
 
+  function resetTimer() {
+    // Reset the timer to its initial value
+    // For example, if the initial value is 30 seconds:
+    time = 20;
+  }
+
   var countdownNumberEl = document.getElementById("countdown-number");
   var countdown = 20;
 

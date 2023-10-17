@@ -3,14 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scriptFeeback.js" defer></script>
     <link rel="stylesheet" href="./assets/css/cssPage4.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -52,7 +46,7 @@
     </header>
     <main>
       <h3>Leave us an open feedback on your experience so far</h3>
-      <form>
+      <form onsubmit="alert('Thanks for your feedback!');">
         <input
           type="text"
           placeholder="Write your comment here"
@@ -64,7 +58,9 @@
     </main>
     <footer>
       <div class="button" style="display: inline-block">
-        <button id="myButton" onclick="redirectToPage()">MORE INFO</button>
+        <button id="myButton" onclick="redirectToPage()">
+          <a href="https://epicode.com">MORE INFO</a>
+        </button>
       </div>
     </footer>
   </body>

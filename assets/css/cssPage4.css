@@ -9,6 +9,9 @@ header img {
   left: 100px;
   top: 40px;
 }
+a {
+  text-decoration: none;
+}
 div h1 {
   color: white;
   text-align: center;
@@ -45,6 +48,12 @@ div h3 {
   padding-inline: 5px;
 }
 
+.stars i {
+  cursor: pointer;
+}
+.stars i.active {
+  filter: invert(34%) sepia(96%) saturate(1938%) hue-rotate(347deg) brightness(100%) contrast(96%);
+ }
 main h3 {
   color: white;
   text-align: center;
