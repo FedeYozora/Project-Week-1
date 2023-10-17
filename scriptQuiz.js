@@ -104,12 +104,12 @@ window.onload = () => {
   let score = 0;
 
   function startTimer() {
-    let time = 20;
+    let time = 5;
     let interval = setInterval(function () {
       time--;
       if (time <= 0) {
         clearInterval(interval);
-        time = 20;
+        time = 5;
         loadNextQuestion();
       } else {
         console.log(time); // Log the remaining time to the console
@@ -120,16 +120,16 @@ window.onload = () => {
   function resetTimer() {
     // Reset the timer to its initial value
     // For example, if the initial value is 30 seconds:
-    time = 20;
+    time = 5;
   }
 
   var countdownNumberEl = document.getElementById("countdown-number");
-  var countdown = 20;
+  var countdown = 5;
 
   countdownNumberEl.textContent = countdown;
 
   setInterval(function () {
-    countdown = --countdown <= 0 ? 20 : countdown;
+    countdown = --countdown <= 0 ? 5 : countdown;
 
     countdownNumberEl.textContent = countdown;
   }, 1000);

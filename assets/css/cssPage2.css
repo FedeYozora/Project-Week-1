@@ -3,23 +3,22 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
-.firstImage img {
-  width: 200px;
-  float: left;
-}
-
-.firstImage {
-  margin-top: 2rem;
-  margin-left: 100px;
+header img {
+  width: 180px;
+  position: relative;
+  left: 100px;
+  top: 40px;
 }
 
 .firstParagraphs {
   color: white;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   object-position: center;
+  margin-bottom: 70px;
 }
 
 #firstBox {
@@ -34,7 +33,9 @@ body {
 }
 .results {
   text-align: right;
-  font-size: 20px;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 #button {
@@ -72,6 +73,9 @@ button {
   color: white;
   margin-top: 3rem;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 45%
 }
 
 #countdown {
@@ -102,10 +106,10 @@ svg circle {
   stroke-dasharray: 113px;
   stroke-dashoffset: 0px;
   stroke-linecap: round;
-  stroke-width: 2px;
+  stroke-width: 4px;
   stroke: rgb(0, 255, 255);
   fill: none;
-  animation: countdown 20s linear infinite forwards;
+  animation: countdown 5s linear infinite forwards;
 }
 
 @keyframes countdown {
