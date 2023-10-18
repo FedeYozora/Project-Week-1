@@ -1,7 +1,11 @@
 function displayResults() {
   window.location.href = "./indexPage3.html";
-  const resultsArea = document.getElementById("resultsArea");
-  const resultsChart = document.createElement("canvas");
-  resultsChart.id = "resultsChart";
-  resultsArea.appendChild(resultsChart);
+
+  let percentage = Math.round((score / questions.length) * 100);
+
+  if (percentage >= 60) {
+    console.log("Congratulazioni sei passato");
+  } else {
+    console.log("Non hai superato il test...");
+  }
 }

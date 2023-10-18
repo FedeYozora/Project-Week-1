@@ -36,7 +36,11 @@ div h3 {
 footer {
     margin-inline: auto;
     text-align: center;
-}
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    }
+
 
 footer h2 {
     color: white;

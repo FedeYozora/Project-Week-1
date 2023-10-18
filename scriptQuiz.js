@@ -102,9 +102,9 @@ window.onload = () => {
   let currentQuestionIndex = 0;
   let score = 0;
   let time = 20;
-
+  let interval;
   function startTimer() {
-    const interval = setInterval(function () {
+    interval = setInterval(function () {
       let countdownNumberEl = document.getElementById("countdown-number");
       countdownNumberEl.textContent = time - 1;
       time--;
@@ -121,6 +121,7 @@ window.onload = () => {
   function resetTimer() {
     // Reset the timer to its initial value
     // For example, if the initial value is 30 seconds:
+    clearInterval(interval);
     time = 20;
   }
 
@@ -166,17 +167,18 @@ window.onload = () => {
       incorrectButton.addEventListener("click", loadNextQuestion);
       answerButton.appendChild(incorrectButton);
     }
+
     startTimer();
   }
 
-  let handleCorrectAns = function (event) {
+  let handleCorrectAns = function () {
     score++;
     this.style.borderColor = "green";
     this.removeEventListener("click", handleCorrectAns);
     console.log(score);
   };
 
-  let handleIncorrectAns = function (event) {
+  let handleIncorrectAns = function () {
     this.style.borderColor = "red";
     this.removeEventListener("click", handleIncorrectAns);
   };
