@@ -123,8 +123,8 @@ window.onload = () => {
     time = 5;
   }
 
-  var countdownNumberEl = document.getElementById("countdown-number");
-  var countdown = 5;
+  let countdownNumberEl = document.getElementById("countdown-number");
+  let countdown = 5;
 
   countdownNumberEl.textContent = countdown;
 
@@ -161,7 +161,7 @@ window.onload = () => {
     questionSpace.innerText = currentQuestion.question;
 
     questionCounter.innerHTML =
-      "DOMANDA " + questionNum + "/" + questions.length;
+      "DOMANDA " + questionNum + "<span>/</span>" + "<span>10</span>";
 
     answerButton.innerHTML = ""; // Clear the answer button
 
@@ -185,11 +185,13 @@ window.onload = () => {
 
   let handleCorrectAns = function (event) {
     score++;
+    this.style.borderColor = "green";
     this.removeEventListener("click", handleCorrectAns);
     console.log(score);
   };
 
   let handleIncorrectAns = function (event) {
+    this.style.borderColor = "red";
     this.removeEventListener("click", handleIncorrectAns);
   };
 

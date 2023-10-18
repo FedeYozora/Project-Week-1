@@ -46,13 +46,15 @@ div h3 {
   width: 4.5%;
   text-align: center;
   padding-inline: 5px;
+  filter: brightness(0) saturate(100%) invert(13%) sepia(10%) saturate(4443%) hue-rotate(196deg) brightness(91%) contrast(110%);
 }
 
 .stars i {
   cursor: pointer;
+  /* fill: rgb(11, 17, 59); */
 }
 .stars i.active {
-  filter: invert(34%) sepia(96%) saturate(1938%) hue-rotate(347deg) brightness(100%) contrast(96%);
+  filter: brightness(0) saturate(100%) invert(86%) sepia(29%) saturate(4117%) hue-rotate(123deg) brightness(108%) contrast(100%);
  }
 main h3 {
   color: white;
@@ -81,6 +83,14 @@ main form {
   padding-bottom: 13px;
   padding-left: 18px;
   font-weight: 500;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+#submitForm {
+  opacity: 0;
 }
 
 footer {

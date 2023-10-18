@@ -37,21 +37,23 @@
         </li>
         <li>This exam will take approx. <span>0-5 minutes.</span></li>
       </ul>
-
-      <div class="form">
-        <div class="checkmark">
+    </div>
+<div>
+      <form action="./indexPage2.html">
+        <div class="box">
+          <label class="container">
           <input type="checkbox" id="myCheckbox" required />
-          <div class="checkmark-box"></div>
+          <span class="checkmark"></span>
+        </label>
         </div>
         <label for="myCheckbox"
-          >I promise to answer myself without help from anyone</label
-        >
-      </div>
+          >I promise to answer myself without help from anyone</label>
       <div class="button" style="display: inline-block">
-        <button id="myButton" onclick="startQuiz()">
-          <a href="./indexPage2.html">PROCEED</a>
+        <button id="myButton"onclick="startQuiz()" >
+          <input type="submit">
+          PROCEED
         </button>
-      </div>
+      </form>
     </div>
   </body>
 </html>

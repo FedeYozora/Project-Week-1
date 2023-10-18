@@ -78,6 +78,10 @@ button {
   left: 45%
 }
 
+#footer span {
+  font-size: 1.17em;
+  color: rgb(194, 18, 141)
+}
 #countdown {
   position: relative;
   margin: auto;
