@@ -152,9 +152,6 @@ window.onload = () => {
   }
 
   function showQuestion() {
-    nextButton.addEventListener("click", loadNextQuestion);
-    nextButton.classList.add("invisible");
-
     let currentQuestion = questions[currentQuestionIndex];
     let questionNum = currentQuestionIndex + 1;
 
@@ -169,16 +166,15 @@ window.onload = () => {
     correctButton.innerText = currentQuestion.correct_answer;
     correctButton.classList.add("correctAnswer");
     correctButton.addEventListener("click", handleCorrectAns);
+    correctButton.addEventListener("click", loadNextQuestion);
 
-    correctButton.addEventListener("click", e => {
-      nextButton.classList.remove("invisible");
-    });
     answerButton.appendChild(correctButton);
 
     for (let i = 0; i < currentQuestion.incorrect_answers.length; i++) {
       const incorrectButton = document.createElement("button");
       incorrectButton.innerText = currentQuestion.incorrect_answers[i];
       incorrectButton.addEventListener("click", handleIncorrectAns);
+      incorrectButton.addEventListener("click", loadNextQuestion);
       answerButton.appendChild(incorrectButton);
     }
   }
