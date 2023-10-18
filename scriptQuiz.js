@@ -97,19 +97,20 @@ const questions = [
 window.onload = () => {
   const questionSpace = document.getElementById("questionArea");
   const answerButton = document.getElementById("buttonRow");
-  const nextButton = document.getElementById("nextQuestion");
   const questionCounter = document.getElementById("questionCount");
 
   let currentQuestionIndex = 0;
   let score = 0;
+  let time = 20;
 
   function startTimer() {
-    let time = 5;
-    let interval = setInterval(function () {
+    const interval = setInterval(function () {
+      let countdownNumberEl = document.getElementById("countdown-number");
+      countdownNumberEl.textContent = time - 1;
       time--;
       if (time <= 0) {
         clearInterval(interval);
-        time = 5;
+        time = 20;
         loadNextQuestion();
       } else {
         console.log(time); // Log the remaining time to the console
@@ -120,32 +121,20 @@ window.onload = () => {
   function resetTimer() {
     // Reset the timer to its initial value
     // For example, if the initial value is 30 seconds:
-    time = 5;
+    time = 20;
   }
-
-  let countdownNumberEl = document.getElementById("countdown-number");
-  let countdown = 5;
-
-  countdownNumberEl.textContent = countdown;
-
-  setInterval(function () {
-    countdown = --countdown <= 0 ? 5 : countdown;
-
-    countdownNumberEl.textContent = countdown;
-  }, 1000);
 
   function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerText = "Prossima";
     showQuestion();
   }
 
   function loadNextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
+      resetTimer();
       showQuestion();
-      startTimer();
     } else {
       displayResults();
     }
@@ -177,6 +166,7 @@ window.onload = () => {
       incorrectButton.addEventListener("click", loadNextQuestion);
       answerButton.appendChild(incorrectButton);
     }
+    startTimer();
   }
 
   let handleCorrectAns = function (event) {
@@ -191,8 +181,5 @@ window.onload = () => {
     this.removeEventListener("click", handleIncorrectAns);
   };
 
-  nextButton.addEventListener("click", showQuestion);
-
   startQuiz();
-  startTimer();
 };
