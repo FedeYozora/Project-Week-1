@@ -138,6 +138,7 @@ function loadNextQuestion() {
     resetTimer();
     showQuestion();
   } else {
+    localStorage.setItem("score", JSON.stringify(score));
     goResultsPage();
   }
 }

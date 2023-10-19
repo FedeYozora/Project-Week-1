@@ -2,6 +2,8 @@ function goResultsPage() {
   window.location.href = "./indexPage3.html";
 }
 
+score = JSON.parse(localStorage.getItem("score"));
+
 function displayResults() {
   let percentage = Math.round((score / 10) * 100);
 
