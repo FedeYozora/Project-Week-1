@@ -94,108 +94,106 @@ const questions = [
   },
 ];
 
-window.onload = () => {
-  const questionSpace = document.getElementById("questionArea");
-  const answerButton = document.getElementById("buttonRow");
-  const questionCounter = document.getElementById("questionCount");
+const questionSpace = document.getElementById("questionArea");
+const answerButton = document.getElementById("buttonRow");
+const questionCounter = document.getElementById("questionCount");
 
-  let currentQuestionIndex = 0;
-  let score = 0;
-  let time = 20;
-  let interval;
-  let countdownNumberEl = document.getElementById("countdown-number");
-  countdownNumberEl.textContent = 20;
+let currentQuestionIndex = 0;
+let score = 0;
+let time = 20;
+let interval;
+let countdownNumberEl = document.getElementById("countdown-number");
+countdownNumberEl.textContent = 20;
 
-  function startTimer() {
-    interval = setInterval(function () {
-      countdownNumberEl.textContent = time - 1;
-      time--;
-      if (time <= 0) {
-        clearInterval(interval);
-        time = 20;
-        loadNextQuestion();
-      } else {
-        console.log(time); // Log the remaining time to the console
-      }
-    }, 1000);
-  }
-
-  function resetTimer() {
-    // Reset the timer to its initial value
-    // For example, if the initial value is 30 seconds:
-    clearInterval(interval);
-    time = 20;
-  }
-
-  function startQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    showQuestion();
-  }
-
-  function loadNextQuestion() {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      resetTimer();
-      showQuestion();
+function startTimer() {
+  interval = setInterval(function () {
+    countdownNumberEl.textContent = time - 1;
+    time--;
+    if (time <= 0) {
+      clearInterval(interval);
+      time = 20;
+      loadNextQuestion();
     } else {
-      displayResults();
+      console.log(time); // Log the remaining time to the console
     }
+  }, 1000);
+}
+
+function resetTimer() {
+  // Reset the timer to its initial value
+  // For example, if the initial value is 30 seconds:
+  clearInterval(interval);
+  time = 20;
+}
+
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  showQuestion();
+}
+
+function loadNextQuestion() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    resetTimer();
+    showQuestion();
+  } else {
+    goResultsPage();
+  }
+}
+
+function resetAnimation() {
+  let donut = document.getElementById("donut-segment");
+  donut.style.animation = "none";
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      donut.style.animation = "";
+    }, 0);
+  });
+}
+
+function showQuestion() {
+  let currentQuestion = questions[currentQuestionIndex];
+  let questionNum = currentQuestionIndex + 1;
+
+  questionSpace.innerText = currentQuestion.question;
+
+  questionCounter.innerHTML =
+    "DOMANDA " + questionNum + "<span>/</span>" + "<span>10</span>";
+
+  answerButton.innerHTML = ""; // Clear the answer button
+
+  const correctButton = document.createElement("button");
+  correctButton.innerText = currentQuestion.correct_answer;
+  correctButton.classList.add("correctAnswer");
+  correctButton.addEventListener("click", handleCorrectAns);
+  correctButton.addEventListener("click", loadNextQuestion);
+  correctButton.addEventListener("click", resetAnimation);
+  answerButton.appendChild(correctButton);
+
+  for (let i = 0; i < currentQuestion.incorrect_answers.length; i++) {
+    const incorrectButton = document.createElement("button");
+    incorrectButton.innerText = currentQuestion.incorrect_answers[i];
+    incorrectButton.addEventListener("click", handleIncorrectAns);
+    incorrectButton.addEventListener("click", loadNextQuestion);
+    incorrectButton.addEventListener("click", resetAnimation);
+
+    answerButton.appendChild(incorrectButton);
   }
 
-  function resetAnimation() {
-    let donut = document.getElementById("donut-segment");
-    donut.style.animation = "none";
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        donut.style.animation = "";
-      }, 0);
-    });
-  }
+  startTimer();
+}
 
-  function showQuestion() {
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNum = currentQuestionIndex + 1;
-
-    questionSpace.innerText = currentQuestion.question;
-
-    questionCounter.innerHTML =
-      "DOMANDA " + questionNum + "<span>/</span>" + "<span>10</span>";
-
-    answerButton.innerHTML = ""; // Clear the answer button
-
-    const correctButton = document.createElement("button");
-    correctButton.innerText = currentQuestion.correct_answer;
-    correctButton.classList.add("correctAnswer");
-    correctButton.addEventListener("click", handleCorrectAns);
-    correctButton.addEventListener("click", loadNextQuestion);
-    correctButton.addEventListener("click", resetAnimation);
-    answerButton.appendChild(correctButton);
-
-    for (let i = 0; i < currentQuestion.incorrect_answers.length; i++) {
-      const incorrectButton = document.createElement("button");
-      incorrectButton.innerText = currentQuestion.incorrect_answers[i];
-      incorrectButton.addEventListener("click", handleIncorrectAns);
-      incorrectButton.addEventListener("click", loadNextQuestion);
-      incorrectButton.addEventListener("click", resetAnimation);
-
-      answerButton.appendChild(incorrectButton);
-    }
-
-    startTimer();
-  }
-
-  let handleCorrectAns = function () {
-    score++;
-    this.style.borderColor = "green";
-    this.removeEventListener("click", handleCorrectAns);
-    console.log(score);
-  };
-
-  let handleIncorrectAns = function () {
-    this.style.borderColor = "red";
-    this.removeEventListener("click", handleIncorrectAns);
-  };
-
-  startQuiz();
+let handleCorrectAns = function () {
+  score++;
+  this.style.borderColor = "green";
+  this.removeEventListener("click", handleCorrectAns);
+  console.log(score);
 };
+
+let handleIncorrectAns = function () {
+  this.style.borderColor = "red";
+  this.removeEventListener("click", handleIncorrectAns);
+};
+
+startQuiz();
