@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./scriptResults.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./assets/css/cssPage3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+    <div>
+      <header>
+        <img src="./assets/epicode_logo.png" alt="Logo Epicode" />
+      </header>
+    </div>
+    
+     <div>
+      <h1>Results</h1>
+      <h3>The summary of your answers:</h3>
+     </div>
+     <div style="text-align: center">
+      <div class="skill">
+        <div id="leftPosition">
+          <h1 class="leftCorrect">Correct</h1>
+          <h2>66.7%</h2>
+          <h4>4/6 questions</h4>
+        </div>
+        <div id="rightPosition">
+          <h1 class="rightIncorrect">Wrong</h1>
+          <h2>33.3%</h2>
+          <h4>2/6 questions</h4>
+        </div>
+        <div class="outer">
+          <div class="inner">
+            <div id="textResult">test</div>
+          </div>
+        </div>
+        <svg id="doughnutChart"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width: 1100px;
+          height: 500px;
+        >
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+            </linearGradient>
+          </defs>
+          <circle cx="550" cy="250" r="190" stroke-linecap="square" />
+        </svg>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <a href="./indexPage4.html"
+        ><div>
+          <h2>RATE US</h2>
+        </div></a
+      >
+    </footer>
+  </body>
+</html>
