@@ -105,9 +105,10 @@ window.onload = () => {
   let interval;
   let countdownNumberEl = document.getElementById("countdown-number");
   countdownNumberEl.textContent = 20;
+
   function startTimer() {
     interval = setInterval(function () {
-      countdownNumberEl.textContent = time;
+      countdownNumberEl.textContent = time - 1;
       time--;
       if (time <= 0) {
         clearInterval(interval);
@@ -142,6 +143,16 @@ window.onload = () => {
     }
   }
 
+  function resetAnimation() {
+    let donut = document.getElementById("donut-segment");
+    donut.style.animation = "none";
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        donut.style.animation = "";
+      }, 0);
+    });
+  }
+
   function showQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
     let questionNum = currentQuestionIndex + 1;
@@ -158,7 +169,7 @@ window.onload = () => {
     correctButton.classList.add("correctAnswer");
     correctButton.addEventListener("click", handleCorrectAns);
     correctButton.addEventListener("click", loadNextQuestion);
-
+    correctButton.addEventListener("click", resetAnimation);
     answerButton.appendChild(correctButton);
 
     for (let i = 0; i < currentQuestion.incorrect_answers.length; i++) {
@@ -166,6 +177,8 @@ window.onload = () => {
       incorrectButton.innerText = currentQuestion.incorrect_answers[i];
       incorrectButton.addEventListener("click", handleIncorrectAns);
       incorrectButton.addEventListener("click", loadNextQuestion);
+      incorrectButton.addEventListener("click", resetAnimation);
+
       answerButton.appendChild(incorrectButton);
     }
 

@@ -107,3 +107,64 @@ circle {
         stroke-dasharray: 70 30;
     }
 }
+
+
+/* ------------------------------------------------------ */
+#leftPosition {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    margin-top: 10px;
+    margin-inline: auto;
+    text-align: start;
+    color: white;
+    line-height: 75px;
+   }
+   
+   #rightPosition {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    margin-top: 10px;
+    margin-inline: auto;
+    text-align: end;
+    color: white;
+    line-height: 75px;
+   }
+
+.leftCorrect {
+    text-align: start;
+    margin-bottom: unset;
+    font-weight: 100;
+  }
+.rightIncorrect {
+  text-align: end;
+  margin-bottom: unset;
+  font-weight: 100;
+}
+
+#container {
+  position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#rightPosition h2 {
+  font-size: 3rem;
+  margin-top: unset;
+  margin-bottom: unset;
+  line-height: 25px;
+}
+
+#leftPosition h2 {
+    font-size: 3rem;
+  margin-top: unset;
+  margin-bottom: unset;
+  line-height: 25px;
+}
+div h4 {
+  font-size: 20px;
+  margin-top: unset;
+  line-height: 50px;
+  font-weight: 100;
+}
