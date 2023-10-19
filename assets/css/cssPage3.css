@@ -93,10 +93,60 @@ circle {
     fill: none;
 }
 
-.donut-segment {
+.donut-segment-0 {
     stroke-dashoffset: 25;
     stroke-dasharray: 100 0;
     animation: anim 2s linear forwards;
+}
+.donut-segment-10 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-10 2s linear forwards;
+}
+.donut-segment-20 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-20 2s linear forwards;
+}
+.donut-segment-30 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-30 2s linear forwards;
+}
+.donut-segment-40 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-40 2s linear forwards;
+}
+.donut-segment-50 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-50 2s linear forwards;
+}
+.donut-segment-60 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-60 2s linear forwards;
+}
+.donut-segment-70 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-70 2s linear forwards;
+}
+.donut-segment-80 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-80 2s linear forwards;
+}
+.donut-segment-90 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-90 2s linear forwards;
+}
+.donut-segment-100 {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim-100 2s linear forwards;
 }
 
 @keyframes anim {
@@ -104,9 +154,89 @@ circle {
         stroke-dasharray: 100 0;
     }
     to {
-        stroke-dasharray: 20 80;
+        stroke-dasharray: 100 0;
     }
 }
+@keyframes anim-10 {
+  from {
+      stroke-dasharray: 100 0;
+  }
+  to {
+      stroke-dasharray: 90 10;
+  }
+}
+@keyframes anim-20 {
+  from {
+      stroke-dasharray: 100 0;
+  }
+  to {
+      stroke-dasharray: 80 20;
+  }
+}
+@keyframes anim-30 {
+  from {
+      stroke-dasharray: 100 0;
+  }
+  to {
+      stroke-dasharray: 70 30;
+  }
+}
+@keyframes anim-40 {
+  from {
+      stroke-dasharray: 100 0;
+  }
+  to {
+      stroke-dasharray: 60 40;
+  }
+}
+@keyframes anim-50 {
+  from {
+      stroke-dasharray: 100 0;
+  }
+  to {
+      stroke-dasharray: 50 50;
+  }
+}
+@keyframes anim-60 {
+  from {
+      stroke-dasharray: 100 0;
+  }
+  to {
+      stroke-dasharray: 40 60;
+  }
+}
+@keyframes anim-70 {
+  from {
+      stroke-dasharray: 100 0;
+  }
+  to {
+      stroke-dasharray: 30 70;
+  }
+}
+@keyframes anim-80 {
+  from {
+      stroke-dasharray: 100 0;
+  }
+  to {
+      stroke-dasharray: 20 80;
+  }
+  }
+  @keyframes anim-90 {
+    from {
+        stroke-dasharray: 100 0;
+    }
+    to {
+        stroke-dasharray: 10 90;
+    }
+  }
+  @keyframes anim-100 {
+    from {
+        stroke-dasharray: 100 0;
+    }
+    to {
+        stroke-dasharray: 0 100;
+    }
+  }
 
 
 /* ------------------------------------------------------ */

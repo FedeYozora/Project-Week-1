@@ -5,6 +5,7 @@ function goResultsPage() {
 score = JSON.parse(localStorage.getItem("score"));
 
 function displayResults() {
+  displayDonutResults();
   let percentage = Math.round((score / 10) * 100);
 
   if (percentage >= 60) {
@@ -62,3 +63,30 @@ function displayResults() {
 }
 
 displayResults();
+
+function displayDonutResults() {
+  let donutChart = document.querySelector(".donut-segment");
+  if (score === 1) {
+    donutChart.classList.add("donut-segment-10");
+  } else if (score === 2) {
+    donutChart.classList.add("donut-segment-20");
+  } else if (score === 3) {
+    donutChart.classList.add("donut-segment-30");
+  } else if (score === 4) {
+    donutChart.classList.add("donut-segment-40");
+  } else if (score === 5) {
+    donutChart.classList.add("donut-segment-50");
+  } else if (score === 6) {
+    donutChart.classList.add("donut-segment-60");
+  } else if (score === 7) {
+    donutChart.classList.add("donut-segment-70");
+  } else if (score === 8) {
+    donutChart.classList.add("donut-segment-80");
+  } else if (score === 9) {
+    donutChart.classList.add("donut-segment-90");
+  } else if (score === 10) {
+    donutChart.classList.add("donut-segment-100");
+  } else {
+    donutChart.classList.add("donut-segment-0");
+  }
+}
