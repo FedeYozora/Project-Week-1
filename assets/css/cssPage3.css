@@ -36,8 +36,11 @@ div h3 {
 footer {
   margin-inline: auto;
   text-align: center;
+<<<<<<< Updated upstream
   position: fixed;
   bottom: 50px;
+=======
+>>>>>>> Stashed changes
   width: 100%;
 }
 
@@ -52,6 +55,7 @@ footer h2 {
   padding-block: 15px;
 }
 
+<<<<<<< Updated upstream
 .skill {
   /* width: 160px;
     height: 160px; */
@@ -113,3 +117,120 @@ svg {
     /*1190 - (1190 * 0.60)*/
   }
 }
+=======
+.chart-text {
+  font: 16px/1.4em "Montserrat", Arial, sans-serif;
+  fill: #fff;
+  transform: translateY(0.25em);
+}
+
+.chart-label-colorChange {
+  fill: aqua;
+  font-size: 2px;
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em);
+}
+.chart-label {
+  font-size: 2px;
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em);
+}
+
+.chart-label-1 {
+  font-size: 1.5px;
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em);
+}
+#textResults {
+  font-weight: 500px;
+  color: white;
+}
+
+circle {
+  fill: none;
+}
+
+.donut-segment {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 100 0;
+  animation: anim 2s linear forwards;
+}
+
+@keyframes anim {
+  from {
+    stroke-dasharray: 100 0;
+  }
+  to {
+    stroke-dasharray: 0 0;
+  }
+}
+
+/* ------------------------------------------------------ */
+#leftPosition {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  margin-top: 10px;
+  margin-inline: auto;
+  text-align: start;
+  color: white;
+  line-height: 75px;
+}
+
+#rightPosition {
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  margin-top: 10px;
+  margin-inline: auto;
+  text-align: end;
+  color: white;
+  line-height: 75px;
+}
+
+.leftCorrect {
+  text-align: start;
+  margin-bottom: unset;
+  font-weight: 100;
+}
+.rightIncorrect {
+  text-align: end;
+  margin-bottom: unset;
+  font-weight: 100;
+}
+
+#container {
+  position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#rightPosition h2 {
+  font-size: 3rem;
+  margin-top: unset;
+  margin-bottom: unset;
+  line-height: 25px;
+}
+
+#leftPosition h2 {
+  font-size: 3rem;
+  margin-top: unset;
+  margin-bottom: unset;
+  line-height: 25px;
+}
+div h4 {
+  font-size: 20px;
+  margin-top: unset;
+  line-height: 50px;
+  font-weight: 100;
+}
+>>>>>>> Stashed changes

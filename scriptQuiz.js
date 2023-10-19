@@ -151,4 +151,20 @@ function showQuestion() {
   });
 }
 
+<<<<<<< Updated upstream
 function ifCorrect() {}
+=======
+let handleCorrectAns = function () {
+  score++;
+  this.classList.add("greenAns");
+  this.removeEventListener("click", handleCorrectAns);
+  console.log(score);
+};
+
+let handleIncorrectAns = function () {
+  this.classList.add("redAns");
+  this.removeEventListener("click", handleIncorrectAns);
+};
+
+startQuiz();
+>>>>>>> Stashed changes

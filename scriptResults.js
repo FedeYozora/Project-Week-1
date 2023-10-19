@@ -4,9 +4,14 @@ function goResultsPage() {
 }
 
 function displayResults() {
+<<<<<<< Updated upstream
   let points = score;
 
   let percentage = Math.round((points / 10) * 100);
+=======
+  displayDonutResults();
+  let percentage = Math.round((score / 10) * 100);
+>>>>>>> Stashed changes
 
   if (percentage >= 60) {
     document.getElementsByClassName("correctPerc")[0].innerText =
@@ -61,3 +66,35 @@ function displayResults() {
     console.log("Non hai superato il test...");
   }
 }
+<<<<<<< Updated upstream
+=======
+
+function displayDonutResults() {
+  let donutChart = document.getElementsByClassName("donut-segment");
+  if (score === 1) {
+    donutChart.classlist.add("donut-segment-10");
+  } else if (score === 2) {
+    donutChart.classlist.add("donut-segment-20");
+  } else if (score === 3) {
+    donutChart.classlist.add("donut-segment-30");
+  } else if (score === 4) {
+    donutChart.classlist.add("donut-segment-40");
+  } else if (score === 5) {
+    donutChart.classlist.add("donut-segment-50");
+  } else if (score === 6) {
+    donutChart.classlist.add("donut-segment-60");
+  } else if (score === 7) {
+    donutChart.classlist.add("donut-segment-70");
+  } else if (score === 8) {
+    donutChart.classlist.add("donut-segment-80");
+  } else if (score === 9) {
+    donutChart.classlist.add("donut-segment-90");
+  } else if (score === 10) {
+    donutChart.classlist.add("donut-segment-100");
+  } else {
+    donutChart.classlist.add("donut-segment-0");
+  }
+}
+
+displayResults();
+>>>>>>> Stashed changes
