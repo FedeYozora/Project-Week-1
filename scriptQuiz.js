@@ -99,8 +99,30 @@ const answerButton = document.getElementById("");
 const nextButton = document.getElementById("");
 const questionCounter = document.getElementById("");
 
+<<<<<<< Updated upstream
 let currentQuestionIndex = 0;
 let score = 0;
+=======
+  let currentQuestionIndex = 0;
+  let score = 0;
+  let time = 20;
+  let interval;
+  let countdownNumberEl = document.getElementById("countdown-number");
+  countdownNumberEl.textContent = 20;
+  function startTimer() {
+    interval = setInterval(function () {
+      countdownNumberEl.textContent = time;
+      time--;
+      if (time <= 0) {
+        clearInterval(interval);
+        time = 20;
+        loadNextQuestion();
+      } else {
+        console.log(time); // Log the remaining time to the console
+      }
+    }, 1000);
+  }
+>>>>>>> Stashed changes
 
 function startQuiz() {
   currentQuestionIndex = 0;

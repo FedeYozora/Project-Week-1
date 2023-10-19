@@ -1,0 +1,149 @@
+body {
+  background-image: url(../bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+header img {
+  width: 180px;
+  position: relative;
+  left: 100px;
+  top: 40px;
+}
+
+.firstParagraphs {
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  object-position: center;
+  margin-bottom: 70px;
+}
+
+#firstBox {
+  margin: 0;
+  width: 100%;
+  display: inline-block;
+  margin-inline: auto;
+}
+
+.result {
+  display: inline-block;
+}
+.results {
+  text-align: right;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+#button {
+  font-size: 100px;
+}
+
+.main {
+  margin: 100px;
+  margin-inline: auto;
+  width: 440px;
+}
+.contenitore2 {
+  padding: 40px;
+  margin-inline: auto;
+  text-align: center;
+  width: 50%;
+}
+
+button {
+  padding: auto;
+  background-color: transparent;
+  color: white;
+  border-radius: 120px;
+  box-shadow: 0px 2px 1px, 1px -4px 10px;
+  border: 0 5px solid;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  width: 40%;
+  height: 120px;
+}
+.invisible {
+  visibility: hidden;
+}
+
+#footer {
+  color: white;
+  margin-top: 3rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 45%;
+}
+
+#footer span {
+  font-size: 1.17em;
+  color: rgb(194, 18, 141);
+}
+#countdown {
+  position: relative;
+  margin-left: 80%;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: white;
+  display: inline-block;
+  line-height: 40px;
+  position: relative;
+  top: 60%;
+  font-size: 2em;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em);
+}
+
+.donut-hole {
+  fill: transparent;
+}
+
+.timer-label-upper {
+  fill: #fff;
+  font-size: 0.2em;
+  -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em);
+  text-anchor: middle;
+  text-transform: uppercase;
+}
+
+.timer-label-lower {
+  font-size: 0.2em;
+  fill: #fff;
+  text-transform: uppercase;
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em);
+}
+
+.donut-segment {
+  animation: countdown 21s linear infinite forwards;
+  stroke-dasharray: 100 0;
+  stroke-dashoffset: 25;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dasharray: 0 100;
+  }
+  to {
+    stroke-dasharray: 100 0;
+  }
+}
