@@ -98,57 +98,57 @@ circle {
 .donut-segment-0 {
     stroke-dashoffset: 25;
     stroke-dasharray: 100 0;
-    animation: anim 2s linear forwards;
+    animation: anim 0.7s linear forwards;
 }
 .donut-segment-10 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-10 2s linear forwards;
+  animation: anim-10 0.7s linear forwards;
 }
 .donut-segment-20 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-20 2s linear forwards;
+  animation: anim-20 0.7s linear forwards;
 }
 .donut-segment-30 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-30 2s linear forwards;
+  animation: anim-30 0.7s linear forwards;
 }
 .donut-segment-40 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-40 2s linear forwards;
+  animation: anim-40 0.7s linear forwards;
 }
 .donut-segment-50 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-50 2s linear forwards;
+  animation: anim-50 0.7s linear forwards;
 }
 .donut-segment-60 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-60 2s linear forwards;
+  animation: anim-60 0.7s linear forwards;
 }
 .donut-segment-70 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-70 2s linear forwards;
+  animation: anim-70 0.7s linear forwards;
 }
 .donut-segment-80 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-80 2s linear forwards;
+  animation: anim-80 0.7s linear forwards;
 }
 .donut-segment-90 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-90 2s linear forwards;
+  animation: anim-90 0.7s linear forwards;
 }
 .donut-segment-100 {
   stroke-dashoffset: 25;
   stroke-dasharray: 100 0;
-  animation: anim-100 2s linear forwards;
+  animation: anim-100 0.7s linear forwards;
 }
 
 @keyframes anim {
@@ -244,8 +244,8 @@ circle {
 /* ------------------------------------------------------ */
 #leftPosition {
     position: absolute;
-    left: 10%;
-    top: 30%;
+    left: 15%;
+    top: 33%;
     margin-top: 10px;
     margin-inline: auto;
     text-align: start;
@@ -255,8 +255,8 @@ circle {
    
    #rightPosition {
     position: absolute;
-    right: 10%;
-    top: 30%;
+    right: 15%;
+    top: 33%;
     margin-top: 10px;
     margin-inline: auto;
     text-align: end;
