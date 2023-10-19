@@ -95,13 +95,13 @@ circle {
 
 .donut-segment {
     stroke-dashoffset: 25;
-    stroke-dasharray: 99 1;
+    stroke-dasharray: 100 0;
     animation: anim 2s linear forwards;
 }
 
 @keyframes anim {
     from {
-        stroke-dasharray: 99 1;
+        stroke-dasharray: 100 0;
     }
     to {
         stroke-dasharray: 70 30;
