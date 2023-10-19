@@ -77,19 +77,18 @@ button {
   text-align: center;
   position: fixed;
   bottom: 0;
-  left: 45%
+  left: 45%;
 }
 
 #footer span {
   font-size: 1.17em;
-  color: rgb(194, 18, 141)
+  color: rgb(194, 18, 141);
 }
 #countdown {
   position: relative;
-  margin: auto;
-  margin-top: 100px;
-  height: 40px;
-  width: 40px;
+  margin-left: 80%;
+  height: 200px;
+  width: 200px;
   text-align: center;
 }
 
@@ -97,32 +96,54 @@ button {
   color: white;
   display: inline-block;
   line-height: 40px;
+  position: relative;
+  top: 60%;
+  font-size: 2em;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em);
 }
 
-svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  transform: rotateY(-180deg) rotateZ(-90deg);
+.donut-hole {
+  fill: transparent;
 }
 
-svg circle {
-  stroke-dasharray: 113px;
-  stroke-dashoffset: 0px;
-  stroke-linecap: round;
-  stroke-width: 4px;
-  stroke: rgb(0, 255, 255);
-  fill: none;
-  animation: countdown 20s linear infinite forwards;
+.timer-label-upper {
+  fill: #fff;
+  font-size: 0.2em;
+  -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em);
+  text-anchor: middle;
+  text-transform: uppercase;
+}
+
+.timer-label-lower {
+  font-size: 0.2em;
+  fill: #fff;
+  text-transform: uppercase;
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em);
+}
+
+.donut-segment {
+  animation: countdown 21s linear infinite forwards;
+  stroke-dasharray: 100 0;
+  stroke-dashoffset: 25;
 }
 
 @keyframes countdown {
   from {
-    stroke-dashoffset: 0px;
+    stroke-dasharray: 0 100;
   }
   to {
-    stroke-dashoffset: 113px;
+    stroke-dasharray: 100 0;
   }
 }

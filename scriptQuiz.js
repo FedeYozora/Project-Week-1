@@ -103,10 +103,11 @@ window.onload = () => {
   let score = 0;
   let time = 20;
   let interval;
+  let countdownNumberEl = document.getElementById("countdown-number");
+  countdownNumberEl.textContent = 20;
   function startTimer() {
     interval = setInterval(function () {
-      let countdownNumberEl = document.getElementById("countdown-number");
-      countdownNumberEl.textContent = time - 1;
+      countdownNumberEl.textContent = time;
       time--;
       if (time <= 0) {
         clearInterval(interval);
