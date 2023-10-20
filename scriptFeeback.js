@@ -27,7 +27,7 @@ document.getElementById("submitForm").addEventListener("click", e => {
     selectedStar === 5
   ) {
     feedback.innerHTML = `<h1>We're sorry to hear that you had a bad experience.</h1>
-        <h3>How can we improve?</h3>`;
+        <h3>We hope to improve our service using your feedback!</h3>`;
     document.querySelector(".rating-box").innerHTML = "";
     document.querySelector("main").innerHTML = "";
   } else if (selectedStar === 6 || selectedStar === 7) {

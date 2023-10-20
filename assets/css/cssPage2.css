@@ -91,6 +91,7 @@ button:hover {
 #footer span {
   font-size: 1.17em;
   color: rgb(194, 18, 141);
+  font-weight: bold
 }
 #countdown {
   position: relative;
@@ -150,7 +151,7 @@ button:hover {
 }
 
 .animation {
-  animation: countdown 21s linear infinite forwards;
+  animation: countdown 20s linear infinite forwards;
 }
 @keyframes countdown {
   from {
